@@ -19,5 +19,11 @@ ys = np.array([-13, -11, -9, -7, -5,
 
 model.fit(xs,ys, epochs=500)
 
-predictions = model.predict([10.0])
+# Save the model with name my_model
+model.save("my_model.keras")
+
+
+# predictions = model.predict([10.0])
+
+predictions = model.predict(np.array([10.0]))
 print(predictions)
